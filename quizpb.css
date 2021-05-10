@@ -1,0 +1,137 @@
+/* (A) WRAPPER */
+#quizWrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* (B) QUESTION */
+#quizQn {
+  padding: 20px;
+  background-color :#ff4e00;
+  background-image :linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  color: rgb(7, 7, 7);
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+/* (C) ANSWERS */
+#quizAns {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+#quizAns input[type=radio] { display: none; }
+#quizAns label {
+  margin-top:20px;
+  margin-left:10px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+#quizAns label.correct {
+  background-image: linear-gradient(90deg, #53f053 50%, #546d5a 100%);
+  border: 1px solid #60f316;
+  
+
+}
+#quizAns label.wrong {
+  background-image: linear-gradient(90deg, #ee225f 50%, #546d5a 100%);
+  border: 1px solid #ec1111;
+}
+#quizAns label:hover{
+  background-color: #f5d020;
+background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+}
+
+/* (D) BODY... DOES NOT QUITE MATTER */
+html, body {
+  background-color :#0077ff;
+  background-image :linear-gradient(315deg, #24a9dd 0%, #297fb8 74%);
+  
+  font-family: arial, sans-serif;
+}
+header {
+  position: relative;
+  background-color: black;
+  height: 87.8vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+
+label.logo{
+  color: white;
+  font-size: 25px;
+  line-height: 60px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+  nav ul{
+      float: right;
+      margin-right: 20px;
+  }
+
+  nav ul li{
+      display: inline-block;
+      line-height: 20px;
+      margin: 0 5px;
+  }
+  nav ul li a{
+      color: white;
+      font-size: 15px;
+      padding: 3px 8px;
+      border-radius: 2px;
+      text-transform: uppercase;
+  }
+
+  a.active,a:hover{
+      background: rgb(20, 168, 119);
+      transition: .5s ease;
+  }
