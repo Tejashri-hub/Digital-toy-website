@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="ex1.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <label class="logo">Mera Bharat</label>
+                <ul>
+                    <li><a href="tour.html">Home</a></li>
+                    <li><a href="imagesmh.html">Gallary</a></li>
+                    <li><a href="quizmh.html">Quiz</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+       <section>
+            <video id="video2" autoplay loop controls muted play>
+                <source src="Ajantha.mp4" type="video/mp4">
+            </video>
+            <ul class="navigation">
+                <li onclick="videoUrl2('Ajantha.mp4')"><img src="Ajanta Caves.jpg"></li>
+                <li onclick="videoUrl2('Raigad Fort.mp4')"><img src="R2.jpg"></li>
+            </ul>
+       
+        </section>
+        <script type="text/javascript">
+        
+            function videoUrl2(hmmmm) {
+                document.getElementById("video2").src = hmmmm;
+            }
+        </script>
+    </header>
+    </body>
+</html>
