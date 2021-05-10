@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: initial;
+}
+
+header{
+    width: 100%;
+    height: 210vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)),url('weasu7rpkro41.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    width: 100%; 
+    height: 12vh;
+    background:rgba(0,0,0,0.2)
+}
+
+label.logo{
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: skyblue;
+    transition: .5s ease;
+    text-decoration: none;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+main{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+section h3{
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px black;
+}
+
+section h1{
+    font-size: 80px;
+    font-weight: 700;
+    text-shadow: 5px 1px 5px black;
+    text-transform: uppercase;
+}
+
+section p{
+    font-size: 30px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px black;
+}
+
+section a{
+    padding: 12px 30px;
+    border-radius: 4px;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all .5s ease;
+}
+
+section .button{
+    background: #00b894;
+    color: #000;
+}
+
+.button:hover{
+    background: #fff;
+    color: #000;
+}
+
+.change_content:after{
+    content: '';
+    animation: changetext 10s infinite ease;
+    color: #00b894;
+}
+
+@keyframes changetext{
+    0% {content: "Maharashtra";}
+    20% {content: "Punjab";}
+    35% {content: "Gujarat";}
+    60% {content: "Karnataka";}
+}
+
+
+
+.hello .card-body{text-align: center;}
+.hello .card-body {font-size: 15px;}
+
+
+
+.gallary div.img{
+    display: block;
+    width: 100%;
+}
+
+.gallary  div.image_overlay{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.30s;
+}
+div.image_overlay > *{
+    transform: translateY(25px);
+    transition: transform 0.30s;
+}
+
+div.image_overlay:hover{
+    opacity: 1;
+}
+
+div.image_overlay:hover > *
+{
+    transform: translateY(0);
+}
+div.image_title{
+    font-size: 6em;
+    font-weight: bold;
+}
+
+ 
+
+
+@media (min-width:576px) {
+
+	.gallery-block .transform-on-hover:hover {
+	    transform: translateY(-10px) scale(1.02);
+	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+	}
+}
+
+@media(max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+
+    }
+}
+
+@media(max-width:758px)
+{
+    .gallery-block.cards-gallery div.row
+    {
+        width: 100px;
+        height: 1000px;
+        padding-bottom: 50px;    }
+    .gallery-block.cards-gallery div.card.border-0.transform-on-hover{
+        width: 200px;
+        height: 200px;
+
+    }
+    .gallery-block.cards-gallery div.container{
+        padding: 0px 0px;
+    }
+}
+
+@media (max-width :858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
